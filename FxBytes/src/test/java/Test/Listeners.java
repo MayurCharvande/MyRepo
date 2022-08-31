@@ -1,0 +1,22 @@
+package Test;
+
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+
+public class Listeners implements ITestListener{
+	public void onTestStart(ITestResult result) 
+	{
+	System.out.println("test has started="+result.getName());
+	}
+
+	public void onTestFailure(ITestResult result)
+	{
+	System.out.println("test has failed="+result.getName());
+	}
+
+	public void onTestSkipped(ITestResult result)
+	{
+	System.out.println("test has skipped="+result.getName());	
+	}
+
+}
